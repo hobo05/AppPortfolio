@@ -2,14 +2,15 @@ package com.chengsoft.android.appportfolio;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,63 +41,21 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * Opens spotify streamer app
-     * @param view the view
+     * Create a toast notification using the text of the button
+     * that is passed in with duration {@link Toast#LENGTH_SHORT}
      */
-    public void openSpotifyStreamer(View view) {
-        makeToast("Open Spotify Streamer");
-    }
+    public void displayToast(View view) {
 
-    /**
-     * Opens Scores App
-     * @param view the view
-     */
-    public void openScoresApp(View view) {
-        makeToast("Open Scores App");
-    }
+        Button button = (Button) view;
 
-    /**
-     * Opens Library App
-     * @param view the view
-     */
-    public void openLibraryApp(View view) {
-        makeToast("Open Library App");
-    }
+        String buttonText = (String) button.getText();
 
-    /**
-     * Opens Build it bigger app
-     * @param view the view
-     */
-    public void openBuildItBigger(View view) {
-        makeToast("Open Build It Bigger");
-    }
-
-    /**
-     * Opens XYZ Reader app
-     * @param view the view
-     */
-    public void openXYZReader(View view) {
-        makeToast("Open XYZ Reader");
-    }
-
-    /**
-     * Opens capstone project app
-     * @param view the view
-     */
-    public void openCapstoneProject(View view) {
-        makeToast("Open Capstone Project");
-    }
-
-    /**
-     * Create a toast notification with the given text
-     * with duration {@link Toast#LENGTH_SHORT}
-     * @param toastText Text to be displayed in the toast
-     */
-    private void makeToast(CharSequence toastText) {
         Context context = getApplicationContext();
+        // open_app would add "Opens the app "
+        CharSequence text = String.format("%s \"%s\"", getString(R.string.open_app), buttonText);
         int duration = Toast.LENGTH_SHORT;
 
-        Toast toast = Toast.makeText(context, toastText, duration);
+        Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
 }
