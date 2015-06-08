@@ -16,6 +16,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
+    <!-- The first button is relatively sized and positioned
+    to the textView above it-->
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -29,6 +31,8 @@
         android:background="#fff08c35"
         android:onClick="openSpotifyStreamer"/>
 
+    <!-- All subsequent buttons are positioned and sized
+     relatively to the button directly above it -->
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

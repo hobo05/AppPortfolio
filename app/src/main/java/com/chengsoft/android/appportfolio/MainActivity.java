@@ -39,30 +39,59 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Opens spotify streamer app
+     * @param view the view
+     */
     public void openSpotifyStreamer(View view) {
         makeToast("Open Spotify Streamer");
     }
 
+    /**
+     * Opens Scores App
+     * @param view the view
+     */
     public void openScoresApp(View view) {
         makeToast("Open Scores App");
     }
 
+    /**
+     * Opens Library App
+     * @param view the view
+     */
     public void openLibraryApp(View view) {
         makeToast("Open Library App");
     }
 
+    /**
+     * Opens Build it bigger app
+     * @param view the view
+     */
     public void openBuildItBigger(View view) {
         makeToast("Open Build It Bigger");
     }
 
+    /**
+     * Opens XYZ Reader app
+     * @param view the view
+     */
     public void openXYZReader(View view) {
         makeToast("Open XYZ Reader");
     }
 
+    /**
+     * Opens capstone project app
+     * @param view the view
+     */
     public void openCapstoneProject(View view) {
         makeToast("Open Capstone Project");
     }
 
+    /**
+     * Create a toast notification with the given text
+     * with duration {@link Toast#LENGTH_SHORT}
+     * @param toastText Text to be displayed in the toast
+     */
     private void makeToast(CharSequence toastText) {
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
