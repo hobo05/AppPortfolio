@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = (Button) view;
 
-        String buttonText = (String) button.getText();
+        String buttonText = (String) button.getText().toString();
 
         Context context = getApplicationContext();
         // open_app would add "Opens the app "
